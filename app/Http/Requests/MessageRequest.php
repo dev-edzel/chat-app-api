@@ -23,7 +23,6 @@ class MessageRequest extends FormRequest
     {
         return [
             'receiver_id' => ['required', 'exists:users,id'],
-            'sender_id' => ['required', 'exists:users,id'],
             'body' => ['required', 'string', 'max:1000'],
         ];
     }
